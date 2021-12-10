@@ -1,7 +1,9 @@
 import './App.css';
 import { Button } from './components/Button';
-import { Container } from './components/Container/Container';
+import { Container } from './components/Container';
 import { Input } from './components/Input';
+import { LoggedIn } from './components/state/LoggedIn';
+import { User } from './components/state/User';
 // import { Heading } from './components/Heading';
 // import { Oscar } from './components/Oscar';
 // import { Status } from './components/Status';
@@ -52,7 +54,10 @@ function App() {
       {/* <Input value="" handleChange={(event) => {console.log(event)}}/> */}
       
       {/* styles props */}
-      <Container styles={{ border: '1px solid black', padding: '1rem'}}/>
+      {/* <Container styles={{ border: '1px solid black', padding: '1rem'}}/> */}
+
+      {/* <LoggedIn /> */}
+      <User />
     </div>
   );
 }
