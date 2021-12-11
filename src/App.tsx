@@ -1,9 +1,13 @@
 import './App.css';
 import { Button } from './components/Button';
 import { Container } from './components/Container';
+import { Box } from './components/context/Box';
+import { ThemeContextProvider } from './components/context/ThemeContext';
+import { UserContextProvider } from './components/context/UserContext';
 import { Input } from './components/Input';
 import { LoggedIn } from './components/state/LoggedIn';
-import { User } from './components/state/User';
+// import { User } from './components/state/User';
+import { User } from './components/context/User'
 // import { Heading } from './components/Heading';
 // import { Oscar } from './components/Oscar';
 // import { Status } from './components/Status';
@@ -57,7 +61,15 @@ function App() {
       {/* <Container styles={{ border: '1px solid black', padding: '1rem'}}/> */}
 
       {/* <LoggedIn /> */}
-      <User />
+      {/* <User /> */}
+
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
+
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
     </div>
   );
 }
